@@ -1,0 +1,50 @@
+body {
+	background: black;
+	text-align: center;
+	justify-content: center;
+}
+
+h1 {
+	color: yellow;
+}
+
+.heart {
+	display: block;
+	margin: 100px;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	transform: rotateZ(-45deg);
+	animation-name: pump;
+	animation-iteration-count: infinite;
+	animation-duration: 0.3s;
+}
+
+@keyframes pump {
+	from {
+		transform: scale(1.2,1.2)rotateZ(-45deg);
+	}
+	to {
+		transform: scale(0.8,0.8)rotateZ(-45deg);
+	}
+}
+
+.heart:after,.heart:before {
+	display: block;
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border-radius: 50px;
+	position: absolute;
+}
+
+.heart:after {
+	top: -50px;
+	left: 0;
+}
+.heart:before {
+	top: 0;
+	left: 50px;
+}
